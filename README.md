@@ -14,11 +14,11 @@
 
 5. Abrir la Consola del Administrador de paquetes, en el apartado de "Proyecto predeterminado" seleccionar la Capa "Database".
  
-En la Consola del Administrador de paquetes escribir el comando: 
-Add-Migration Initial -Context ApplicationDbContext
+  En la Consola del Administrador de paquetes escribir el comando: 
+  Add-Migration Initial -Context ApplicationDbContext
 
-Luego de crearse el Migration escribir el comando:
-Update-Database -Context ApplicationDbContext
+  Luego de crearse el Migration escribir el comando:
+  Update-Database -Context ApplicationDbContext
 
 6. Para poder ejecutar el proyecto ir a la solución del proyecto
 ![image](https://github.com/JaimeTerrero/Solvex_Technical_Test/assets/95511131/289f639c-7f78-4c3c-8aac-0e593a80adef)
