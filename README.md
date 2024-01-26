@@ -1,1 +1,1 @@
-# ¿Cómo correr el programa?
+¿Cómo correr el programa?
