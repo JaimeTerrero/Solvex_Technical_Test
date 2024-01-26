@@ -27,12 +27,13 @@
                     <div class="card-body">
                         <h4>@item.Name</h4>
                         <div>
-                            <small class="fw-bold fs-6">Región: @item.Description</small>
+                            <small class="fw-bold fs-6">Descripción: @item.Description</small>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a asp-controller="Project" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">Editar</a>
-                                <a asp-controller="Project" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Borrar</a>
+                                    @*<a asp-controller="Project" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Borrar</a>*@
+                                    <button type="button" data-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Borrar</button>
                             </div>
                         </div>
                     </div>
@@ -43,3 +44,37 @@
                         
      </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<form id="deleteForm" asp-action="Delete">
+
+    <input type="hidden" id="projectTypeId" name="Id" />
+
+</form>
+
+@section Scripts{
+
+    <script>
+        $(function () {
+            $('.deleteBtn').click(function(e) {
+                swal({
+                    title: "¿Está seguro?",
+                    text: "¿Está seguro que desea eliminar el proyecto?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) => {
+                    if (confirm) {
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $('#projectTypeId').val(id);
+                        $('#deleteForm').submit();
+                    }
+                })
+            })
+        })
+    </script>
+
+}

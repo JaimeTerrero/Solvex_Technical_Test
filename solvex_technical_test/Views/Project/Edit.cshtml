@@ -17,11 +17,6 @@
                     <form method="post" asp-controller="Project" asp-action="Edit">
 
                         <div class="mb-3">
-                            <label asp-for="Id" class="form-label">Nombre: </label>
-                            <input type="text" readonly asp-for="Id" class="form-control" />
-                        </div>
-
-                        <div class="mb-3">
                             <label asp-for="Name" class="form-label">Nombre: </label>
                             <input type="text" asp-for="Name" class="form-control" />
                             <span asp-validation-for="Name" class="text-danger"></span>

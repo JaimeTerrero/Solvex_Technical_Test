@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+Z5a63jbTzqttwqqCKCUXIWL5IiuzgqvT76deF/r7U8=",
+  "Hash": "FUeHo2usa88EdTFrdR+mgjHZzkKLm1mZ3xddA/0IyDA=",
   "Source": "solvex_technical_test",
   "BasePath": "_content/solvex_technical_test",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\solvex_technical_test\\solvex_technical_test\\solvex_technical_test\\wwwroot\\lib\\sweetalert\\sweetalert.min.js",
+      "SourceId": "solvex_technical_test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\solvex_technical_test\\solvex_technical_test\\solvex_technical_test\\wwwroot\\",
+      "BasePath": "_content/solvex_technical_test",
+      "RelativePath": "lib/sweetalert/sweetalert.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\sweetalert\\sweetalert.min.js"
     }
   ]
 }
