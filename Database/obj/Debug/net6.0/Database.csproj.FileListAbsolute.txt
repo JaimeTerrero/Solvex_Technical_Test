@@ -17,5 +17,3 @@ C:\Users\MSI\Desktop\solvex_technical_test\solvex_technical_test\Database\bin\De
 C:\Users\MSI\Desktop\solvex_technical_test\solvex_technical_test\Database\bin\Debug\net6.0\Application.pdb
 C:\Users\MSI\Desktop\solvex_technical_test\solvex_technical_test\Database\bin\Debug\net6.0\Domain.pdb
 C:\Users\MSI\Desktop\solvex_technical_test\solvex_technical_test\Database\obj\Debug\net6.0\Database.csproj.CopyComplete
-C:\Users\MSI\Desktop\solvex_technical_test\solvex_technical_test\Database\bin\Debug\net6.0\Identity.dll
-C:\Users\MSI\Desktop\solvex_technical_test\solvex_technical_test\Database\bin\Debug\net6.0\Identity.pdb
