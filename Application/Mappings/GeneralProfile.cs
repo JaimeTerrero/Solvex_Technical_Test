@@ -2,6 +2,7 @@
 using Application.ViewModels;
 using AutoMapper;
 using Database.Models;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,9 @@ namespace Application.Mappings
                 .ReverseMap();*/
 
             CreateMap<Project, ProjectResponse>()
+                .ReverseMap();
+
+            CreateMap<SaveUserViewModel, User>()
                 .ReverseMap();
         }
     }

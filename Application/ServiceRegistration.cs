@@ -22,7 +22,6 @@ namespace Application
 
             #region Services
             services.AddTransient(typeof(IGenericService<,,>), typeof(GenericService<,,>));
-            services.AddTransient<IUserService, UserService>();
             #endregion
         }
     }

@@ -1,0 +1,28 @@
+﻿@model Application.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "Eliminar Usuario";
+}
+
+<div class="row">
+
+    <div class="col-6 offset-3">
+        <div class="card">
+            <div class="card-header bg-danger text-light">
+                <h4>¿Está seguro de que desea eliminar el Proyecto?</h4>
+            </div>
+            <div class="card-body">
+
+                <form method="post" asp-controller="User" asp-action="Delete">
+
+                    <input type="hidden" asp-for="Id"/>
+
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <a asp-controller="User" asp-action="Index" class="btn btn-warning">Cancelar</a>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -11,22 +11,21 @@ namespace Application.ViewModels
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar el nombre")]
-        public string Firstname { get; set; }
+        [Required(ErrorMessage = "Debe colocar el nombre del usuario")]
+        public string Name { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar el apellido")]
+        [Required(ErrorMessage = "Debe colocar el apellido del usuario")]
         public string Lastname { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar el correo")]
+        [Required(ErrorMessage = "Debe colocar el correo del usuario")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar el nombre de usuario")]
-        public string Username { get; set; }
+        [Required(ErrorMessage = "Debe colocar la posición del usuario")]
+        public string Position { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar la contraseña")]
-        public string Password { get; set; }
+        [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar el proyecto")]
+        public int ProjectId { get; set; }
 
-        [Required(ErrorMessage = "Debe volver a colocar la contraseña")]
-        public string ConfirmPassword { get; set; }
+        public List<ProjectViewModel> Projects { get; set; }
     }
 }

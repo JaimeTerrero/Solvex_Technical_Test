@@ -14,13 +14,14 @@ namespace Database.Context
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Project> Projects { get; set; }
-
+        public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // FLUENT API
 
             #region tables
             modelBuilder.Entity<Project>().ToTable("Projects");
+            modelBuilder.Entity<User>().ToTable("Users");
             #endregion
 
             //#region relationships
@@ -30,6 +31,14 @@ namespace Database.Context
             //    .HasForeignKey(user => user.ProjectId)
             //    .OnDelete(DeleteBehavior.Cascade);
             //#endregion
+
+            #region
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Project)
+                .WithMany(p => p.Users)
+                .HasForeignKey(u => u.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
+            #endregion
 
             //modelBuilder.Entity<User>().HasData(
             //   new User

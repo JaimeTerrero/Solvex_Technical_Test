@@ -2,6 +2,7 @@
 using Application.Interfaces;
 using Database.Context;
 using Database.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System;
@@ -65,6 +66,14 @@ namespace Application.Repository
             await _dbContext.SaveChangesAsync();
             if (project == null) throw new KeyNotFoundException("Los campos son obligatorios");
             return project;
+        }
+
+        public async Task<User> UpdateUserAsync(User user)
+        {
+            var entry = await _dbContext.Set<User>().FindAsync(user.Id);
+            _dbContext.Entry(entry).CurrentValues.SetValues(user);
+            await _dbContext.SaveChangesAsync();
+            return user;
         }
     }
 }
